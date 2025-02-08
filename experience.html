@@ -10,169 +10,192 @@
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       scroll-behavior: smooth;
-      padding-top: 80px;
-      background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 900px;
-      margin-top: 20px;
+
+    /* 让内容区撑满屏幕 */
+    .content {
+      flex: 1;
     }
-    .accordion-button {
-      font-size: 1.2rem;
+
+    /* 顶部导航优化 */
+    .navbar-custom {
+      padding: 15px 0;
+    }
+
+    .navbar-custom h2 {
+      font-size: 1.8rem;
       font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    .accordion-button:hover {
-      background-color: #e9ecef;
-    }
-    .navbar {
-      padding: 15px 20px;
-    }
-    .navbar h2 {
-      flex-grow: 1;
-      text-align: center;
-      color: white;
       margin: 0;
+    }
+
+    /* 介绍文字放大 */
+    p.text-muted {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    /* accordion 样式优化 */
+    .accordion-button {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .accordion-body {
+      font-size: 1.1rem;
+    }
+
+    /* 固定底部栏 */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
     }
   </style>
 </head>
 <body>
 
-  <!-- 顶部区域（返回按钮 + 标题） -->
-  <nav class="navbar navbar-dark bg-dark fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-between">
-      <a class="btn btn-outline-light" href="index.html">Go Back Home</a>
-      <h2 class="text-white mb-0">Professional Experience</h2>
+<!-- 顶部区域（返回按钮 + 标题） -->
+<nav class="navbar navbar-dark bg-dark fixed-top navbar-custom">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a class="btn btn-outline-light" href="index.html">Go Back Home</a>
+    <h2 class="text-white">Professional Experience</h2>
+  </div>
+</nav>
+
+<!-- 主要内容 -->
+<section class="container mt-5 pt-5 content">
+  <p class="text-center text-muted">A summary of my past work experiences and internships.</p>
+
+  <div class="accordion" id="experienceAccordion">
+    
+    <!-- Experience 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience1">
+          Rio Tinto Centre for Mine Automation
+        </button>
+      </h2>
+      <div id="experience1" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Project Intern (01/2024 - 08/2024)</strong></p>
+          <ul>
+            <li>Contributed to the “Design of Decarbonisation Pathways for Salt Mining Operations” project.</li>
+            <li>Utilized Python to analyze operational data from three mining sites.</li>
+            <li>Employed Homer Pro for microgrid optimization and economic assessment.</li>
+            <li>Developed targeted mitigation strategies and renewable technology implementation plans.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </nav>
 
-  <!-- 工作经验介绍 -->
-  <section class="container">
-    <p class="text-center text-muted">A summary of my past work experiences and internships.</p>
-
-    <div class="accordion" id="experienceAccordion">
-
-      <!-- Rio Tinto -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience1">
-            Rio Tinto Centre for Mine Automation
-          </button>
-        </h2>
-        <div id="experience1" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-          <div class="accordion-body">
-            <p><strong>Project Intern (01/2024 - 08/2024)</strong></p>
-            <ul>
-              <li>Contributed to the “Design of Decarbonisation Pathways for Salt Mining Operations” project.</li>
-              <li>Utilized Python to analyze operational data from three mining sites.</li>
-              <li>Employed Homer Pro for microgrid optimization and economic assessment.</li>
-              <li>Developed targeted mitigation strategies and renewable technology implementation plans.</li>
-            </ul>
-          </div>
+    <!-- Experience 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience2">
+          CSIRO
+        </button>
+      </h2>
+      <div id="experience2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Research Intern (11/2023 - 02/2024)</strong></p>
+          <ul>
+            <li>Researched decarbonization initiatives in Direct Air Capture.</li>
+            <li>Collaborated with a multidisciplinary team to implement sustainable practices.</li>
+            <li>Assisted in experiment design, field studies, and data processing.</li>
+          </ul>
         </div>
       </div>
-
-      <!-- CSIRO -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience2">
-            CSIRO
-          </button>
-        </h2>
-        <div id="experience2" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-          <div class="accordion-body">
-            <p><strong>Research Intern (11/2023 - 02/2024)</strong></p>
-            <ul>
-              <li>Researched decarbonization initiatives in Direct Air Capture.</li>
-              <li>Collaborated with a multidisciplinary team to implement sustainable practices.</li>
-              <li>Assisted in experiment design, field studies, and data processing.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Dingdian Education -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience3">
-            Dingdian Education
-          </button>
-        </h2>
-        <div id="experience3" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-          <div class="accordion-body">
-            <p><strong>Mathematics Tutor (09/2022 - 12/2023)</strong></p>
-            <ul>
-              <li>Created informative tutorials based on classroom concepts to boost student comprehension.</li>
-              <li>Coached students through challenging material using positive reinforcement.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Zeus Street Greek -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience4">
-            Zeus Street Greek
-          </button>
-        </h2>
-        <div id="experience4" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-          <div class="accordion-body">
-            <p><strong>Team Member (06/2022 - 08/2022)</strong></p>
-            <ul>
-              <li>Addressed customer needs and resolved complaints with enthusiasm and patience.</li>
-              <li>Built and maintained effective working relationships with peers and upper management.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Standard Education -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience5">
-            Standard Education
-          </button>
-        </h2>
-        <div id="experience5" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-          <div class="accordion-body">
-            <p><strong>Tutorial Teacher (02/2021 - 02/2022)</strong></p>
-            <ul>
-              <li>Provided lessons with targeted learning objectives for 100+ students.</li>
-              <li>Improved students' academic performance in elementary and intermediate Mathematics and English by 10%.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Zhigao Textile -->
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience6">
-            Zhigao Textile
-          </button>
-        </h2>
-        <div id="experience6" class="accordion-collapse collapse" data-bs-parent="#experienceAccordion">
-          <div class="accordion-body">
-            <p><strong>Sales Consultant (06/2020 - 12/2020)</strong></p>
-            <ul>
-              <li>Demonstrated various textiles to potential buyers.</li>
-              <li>Monitored the customer order process and addressed after-sales issues.</li>
-              <li>Generated revenue of 30,000 AUD equivalent.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
 
-  <!-- 页脚 -->
-  <footer class="py-3 bg-dark text-white text-center mt-5">
-    <div class="container">
-      <p>&copy; 2025 Jason Xu. All rights reserved.</p>
+    <!-- Experience 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience3">
+          Dingdian Education
+        </button>
+      </h2>
+      <div id="experience3" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Mathematics Tutor (09/2022 - 12/2023)</strong></p>
+          <ul>
+            <li>Created informative tutorials based on classroom concepts to boost student comprehension.</li>
+            <li>Coached students through challenging material using positive reinforcement.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <!-- Experience 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience4">
+          Zeus Street Greek
+        </button>
+      </h2>
+      <div id="experience4" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Team Member (06/2022 - 08/2022)</strong></p>
+          <ul>
+            <li>Addressed customer needs and resolved complaints with enthusiasm and patience.</li>
+            <li>Built and maintained effective working relationships with peers and upper management.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience 5 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience5">
+          Standard Education
+        </button>
+      </h2>
+      <div id="experience5" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Tutorial Teacher (02/2021 - 02/2022)</strong></p>
+          <ul>
+            <li>Provided lessons with targeted learning objectives for 100+ students.</li>
+            <li>Improved students' academic performance in elementary and intermediate Mathematics and English by 10%.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience 6 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#experience6">
+          Zhigao Textile
+        </button>
+      </h2>
+      <div id="experience6" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Sales Consultant (06/2020 - 12/2020)</strong></p>
+          <ul>
+            <li>Demonstrated various textiles to potential buyers.</li>
+            <li>Monitored the customer order process and addressed after-sales issues.</li>
+            <li>Generated revenue of 30,000 AUD equivalent.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 固定底部栏 -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Jason Xu. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
