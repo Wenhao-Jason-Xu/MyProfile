@@ -1,0 +1,49 @@
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Projects</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg">
+          <img src="project-thumbnail.jpg" class="card-img-top" alt="Cruise Control Simulation">
+          <div class="card-body">
+            <h5 class="card-title">Cruise Control & Lane Changing Automation</h5>
+            <p class="card-text">Developed control strategies for automated cruise control and lane changing using a Mercedes AMG C63s model...</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Detailed Project Info -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Cruise Control & Lane Changing Automation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Project Overview:</strong> This project focuses on implementing and validating control strategies for automotive cruise control and lane changing using a Mercedes AMG C63s model.</p>
+        <p><strong>Methodology:</strong></p>
+        <ul>
+          <li>Designed a <strong>P Controller</strong> for cruise control to regulate speed with error correction.</li>
+          <li>Implemented a <strong>PD Controller</strong> for lane changing to ensure smooth transitions.</li>
+          <li>Validated performance using simulations under various conditions.</li>
+        </ul>
+        <p><strong>Key Findings:</strong></p>
+        <ul>
+          <li>P Controller maintained stability but had steady-state errors under disturbances.</li>
+          <li>PD Controller ensured accurate and safe lane changes.</li>
+          <li>Future improvements include integrating an I component for better accuracy.</li>
+        </ul>
+        <a href="3500Design_Project1.pdf" download class="btn btn-secondary">Download Full Report</a>
+      </div>
+    </div>
+  </div>
+</div>
