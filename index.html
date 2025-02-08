@@ -23,17 +23,24 @@
       padding: 20px;
     }
     .profile-photo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid white;
-      margin-bottom: 15px;
-    }
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  margin-bottom: 15px;
+}
+
     .card {
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+  width: 100%;
+  max-width: 600px; /* 限制最大宽度，避免过宽 */
+  height: auto; /* 让高度自动适应内容 */
+  border-radius: 15px; /* 让卡片四角更圆滑 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* 添加阴影提升美感 */
+  padding: 20px;
+  margin: 20px auto; /* 居中卡片 */
+}
+
   </style>
 </head>
 <body>
