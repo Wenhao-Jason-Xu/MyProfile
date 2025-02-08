@@ -10,140 +10,186 @@
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    .container {
-      margin-top: 80px;
+
+    /* 让内容区撑满屏幕 */
+    .content {
+      flex: 1;
     }
-    .accordion-button {
-      font-size: 1.2rem;
+
+    /* 顶部导航优化 */
+    .navbar-custom {
+      padding: 15px 0;
+    }
+
+    .navbar-custom h2 {
+      font-size: 1.8rem;
       font-weight: bold;
+      margin: 0;
+    }
+
+    /* 介绍文字放大 */
+    p.text-muted {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+    /* accordion 样式优化 */
+    .accordion-button {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .accordion-body {
+      font-size: 1.1rem;
+    }
+
+    /* 固定底部栏 */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
     }
   </style>
 </head>
 <body>
+
 <!-- 顶部区域（返回按钮 + 标题） -->
-<nav class="navbar navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-dark bg-dark fixed-top navbar-custom">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="btn btn-outline-light" href="index.html">Go Back Home</a>
-    <h2 class="text-white mb-0">Extracurricular Activities</h2>
+    <h2 class="text-white">Extracurricular Activities</h2>
   </div>
 </nav>
 
-<!-- 活动介绍 -->
-<section class="container mt-5 pt-5">
+<!-- 主要内容 -->
+<section class="container mt-5 pt-5 content">
   <p class="text-center text-muted">A showcase of my involvement in research, competitions, and volunteering.</p>
 
   <div class="accordion" id="activitiesAccordion">
-
     
-    <div class="accordion" id="activitiesAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity1">
-            University of Sydney Design Build Fly Team
-          </button>
-        </h2>
-        <div id="activity1" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
-          <div class="accordion-body">
-            <p><strong>Structural & Manufacturing Engineer</strong></p>
-            <ul>
-              <li>Achieved 10th place globally in the 2024 AIAA Design Build Fly Competition.</li>
-              <li>Conducted material research and contributed to aircraft design.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity2">
-            Engineering Vacation Research Program
-          </button>
-        </h2>
-        <div id="activity2" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
-          <div class="accordion-body">
-            <p><strong>Research Internship</strong></p>
-            <ul>
-              <li>Investigated high-performance metal-ceramic composites.</li>
-              <li>Performed compression tests using LS-Dyna.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity3">
-            University of Sydney ENGO Mentoring
-          </button>
-        </h2>
-        <div id="activity3" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
-          <div class="accordion-body">
-            <p><strong>Peer Mentor</strong></p>
-            <ul>
-              <li>Guided first-year students on study strategies and time management.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity4">
-            Practera STEM Industry Challenge
-          </button>
-        </h2>
-        <div id="activity4" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
-          <div class="accordion-body">
-            <p><strong>Student Consultant</strong></p>
-            <ul>
-              <li>Conducted customer segmentation and competitor analysis.</li>
-              <li>Provided strategic recommendations for industry clients.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity5">
-            Acer x Sydney Film Festival
-          </button>
-        </h2>
-        <div id="activity5" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
-          <div class="accordion-body">
-            <p><strong>Event Promoter</strong></p>
-            <ul>
-              <li>Facilitated workshops and event operations.</li>
-              <li>Received a letter of recommendation for outstanding contributions.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity6">
-            Global Digital Economy Summit 2022
-          </button>
-        </h2>
-        <div id="activity6" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
-          <div class="accordion-body">
-            <p><strong>Volunteer</strong></p>
-            <ul>
-              <li>Assisted in organizing a summit attended by 500+ participants.</li>
-            </ul>
-          </div>
+    <!-- Activity 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity1">
+          University of Sydney Design Build Fly Team
+        </button>
+      </h2>
+      <div id="activity1" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Structural & Manufacturing Engineer</strong></p>
+          <ul>
+            <li>Achieved 10th place globally in the 2024 AIAA Design Build Fly Competition.</li>
+            <li>Conducted material research and contributed to aircraft design.</li>
+          </ul>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- 页脚 -->
-  <footer class="py-3 bg-dark text-white text-center mt-5">
-    <div class="container">
-      <p>&copy; 2025 Jason Xu. All rights reserved.</p>
+    <!-- Activity 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity2">
+          Engineering Vacation Research Program
+        </button>
+      </h2>
+      <div id="activity2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Research Internship</strong></p>
+          <ul>
+            <li>Investigated high-performance metal-ceramic composites.</li>
+            <li>Performed compression tests using LS-Dyna.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </footer>
+
+    <!-- Activity 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity3">
+          University of Sydney ENGO Mentoring
+        </button>
+      </h2>
+      <div id="activity3" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Peer Mentor</strong></p>
+          <ul>
+            <li>Guided first-year students on study strategies and time management.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity4">
+          Practera STEM Industry Challenge
+        </button>
+      </h2>
+      <div id="activity4" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Student Consultant</strong></p>
+          <ul>
+            <li>Conducted customer segmentation and competitor analysis.</li>
+            <li>Provided strategic recommendations for industry clients.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 5 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity5">
+          Acer x Sydney Film Festival
+        </button>
+      </h2>
+      <div id="activity5" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Event Promoter</strong></p>
+          <ul>
+            <li>Facilitated workshops and event operations.</li>
+            <li>Received a letter of recommendation for outstanding contributions.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity 6 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity6">
+          Global Digital Economy Summit 2022
+        </button>
+      </h2>
+      <div id="activity6" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Volunteer</strong></p>
+          <ul>
+            <li>Assisted in organizing a summit attended by 500+ participants.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 固定底部栏 -->
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2025 Jason Xu. All rights reserved.</p>
+  </div>
+</footer>
+
 </body>
 </html>
