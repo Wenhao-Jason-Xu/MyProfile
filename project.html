@@ -1,49 +1,110 @@
-<!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4">Projects</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card shadow-lg">
-          <img src="project-thumbnail.jpg" class="card-img-top" alt="Cruise Control Simulation">
-          <div class="card-body">
-            <h5 class="card-title">Cruise Control & Lane Changing Automation</h5>
-            <p class="card-text">Developed control strategies for automated cruise control and lane changing using a Mercedes AMG C63s model...</p>
-            <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#projectModal">
-              Read More
-            </button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Jason Xu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* 固定返回按钮 + 标题 */
+    .navbar {
+      padding: 15px;
+    }
+
+    /* 卡片优化 */
+    .project-card {
+      max-width: 900px; 
+      margin: 20px auto; 
+      border-radius: 12px; 
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    /* 页脚固定到底部 */
+    footer {
+      margin-top: auto;
+      padding: 15px;
+      background: #212529;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 顶部区域（返回按钮 + 标题） -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="btn btn-outline-light" href="index.html">Go Back Home</a>
+      <h2 class="text-white mb-0">Projects</h2>
+    </div>
+  </nav>
+
+  <!-- 项目内容 -->
+  <section class="container mt-5 pt-5">
+    <p class="text-center text-muted">Showcasing my engineering and automation projects.</p>
+
+    <!-- 单个项目 -->
+    <div class="card project-card">
+      <img src="project-thumbnail.jpg" class="card-img-top" alt="Cruise Control Simulation">
+      <div class="card-body">
+        <h4 class="card-title text-center">Cruise Control & Lane Changing Automation</h4>
+        <p class="card-text">Developed control strategies for automated cruise control and lane changing using a Mercedes AMG C63s model.</p>
+        <div class="text-center">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#projectModal">
+            Read More
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 弹窗 (Modal) 详细信息 -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="projectModalLabel">Cruise Control & Lane Changing Automation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p><strong>Project Overview:</strong> This project focuses on implementing and validating control strategies for automotive cruise control and lane changing using a Mercedes AMG C63s model.</p>
+          <p><strong>Methodology:</strong></p>
+          <ul>
+            <li>Designed a <strong>P Controller</strong> for cruise control to regulate speed with error correction.</li>
+            <li>Implemented a <strong>PD Controller</strong> for lane changing to ensure smooth transitions.</li>
+            <li>Validated performance using simulations under various conditions.</li>
+          </ul>
+          <p><strong>Key Findings:</strong></p>
+          <ul>
+            <li>P Controller maintained stability but had steady-state errors under disturbances.</li>
+            <li>PD Controller ensured accurate and safe lane changes.</li>
+            <li>Future improvements include integrating an I component for better accuracy.</li>
+          </ul>
+          <div class="text-center">
+            <a href="3500Design_Project1.pdf" download class="btn btn-secondary w-100">📄 Download Full Report</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Modal for Detailed Project Info -->
-<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="projectModalLabel">Cruise Control & Lane Changing Automation</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p><strong>Project Overview:</strong> This project focuses on implementing and validating control strategies for automotive cruise control and lane changing using a Mercedes AMG C63s model.</p>
-        <p><strong>Methodology:</strong></p>
-        <ul>
-          <li>Designed a <strong>P Controller</strong> for cruise control to regulate speed with error correction.</li>
-          <li>Implemented a <strong>PD Controller</strong> for lane changing to ensure smooth transitions.</li>
-          <li>Validated performance using simulations under various conditions.</li>
-        </ul>
-        <p><strong>Key Findings:</strong></p>
-        <ul>
-          <li>P Controller maintained stability but had steady-state errors under disturbances.</li>
-          <li>PD Controller ensured accurate and safe lane changes.</li>
-          <li>Future improvements include integrating an I component for better accuracy.</li>
-        </ul>
-        <a href="3500Design_Project1.pdf" download class="btn btn-secondary w-100">📄 Download Full Report</a>
-      </div>
+  <!-- 页脚 -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Jason Xu. All rights reserved.</p>
     </div>
-  </div>
-</div>
+  </footer>
+
+</body>
+</html>
