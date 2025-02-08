@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Activities - Jason Xu</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -13,80 +14,123 @@
     .container {
       margin-top: 80px;
     }
+    .accordion-button {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <!-- 顶部返回按钮 -->
+  <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Jason Xu</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-          <li class="nav-item"><a class="nav-link active" href="activities.html">Activities</a></li>
-        </ul>
-      </div>
+      <a class="btn btn-outline-light" href="index.html">Go Back Home</a>
     </div>
   </nav>
 
   <!-- 活动经历 -->
-  <section class="container">
-    <h2>Activities</h2>
-    <div class="list-group">
-      <div class="list-group-item">
-        <h4>University of Sydney Design Build Fly Team</h4>
-        <p><strong>Structural & Manufacturing Engineer</strong></p>
-        <ul>
-          <li>Achieved 10th place globally in the 2024 AIAA Design Build Fly Competition.</li>
-          <li>Conducted material research and contributed to aircraft design.</li>
-        </ul>
+  <section class="container mt-5 pt-4">
+    <h2 class="mb-4">Activities</h2>
+    
+    <div class="accordion" id="activitiesAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity1">
+            University of Sydney Design Build Fly Team
+          </button>
+        </h2>
+        <div id="activity1" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
+          <div class="accordion-body">
+            <p><strong>Structural & Manufacturing Engineer</strong></p>
+            <ul>
+              <li>Achieved 10th place globally in the 2024 AIAA Design Build Fly Competition.</li>
+              <li>Conducted material research and contributed to aircraft design.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group-item">
-        <h4>Engineering Vacation Research Program</h4>
-        <p><strong>Research Internship</strong></p>
-        <ul>
-          <li>Investigated high-performance metal-ceramic composites.</li>
-          <li>Performed compression tests using LS-Dyna.</li>
-        </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity2">
+            Engineering Vacation Research Program
+          </button>
+        </h2>
+        <div id="activity2" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
+          <div class="accordion-body">
+            <p><strong>Research Internship</strong></p>
+            <ul>
+              <li>Investigated high-performance metal-ceramic composites.</li>
+              <li>Performed compression tests using LS-Dyna.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group-item">
-        <h4>University of Sydney ENGO Mentoring</h4>
-        <p><strong>Peer Mentor</strong></p>
-        <ul>
-          <li>Guided first-year students on study strategies and time management.</li>
-        </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity3">
+            University of Sydney ENGO Mentoring
+          </button>
+        </h2>
+        <div id="activity3" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
+          <div class="accordion-body">
+            <p><strong>Peer Mentor</strong></p>
+            <ul>
+              <li>Guided first-year students on study strategies and time management.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group-item">
-        <h4>Practera STEM Industry Challenge</h4>
-        <p><strong>Student Consultant</strong></p>
-        <ul>
-          <li>Conducted customer segmentation and competitor analysis.</li>
-          <li>Provided strategic recommendations for industry clients.</li>
-        </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity4">
+            Practera STEM Industry Challenge
+          </button>
+        </h2>
+        <div id="activity4" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
+          <div class="accordion-body">
+            <p><strong>Student Consultant</strong></p>
+            <ul>
+              <li>Conducted customer segmentation and competitor analysis.</li>
+              <li>Provided strategic recommendations for industry clients.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group-item">
-        <h4>Acer x Sydney Film Festival</h4>
-        <p><strong>Event Promoter</strong></p>
-        <ul>
-          <li>Facilitated workshops and event operations.</li>
-          <li>Received a letter of recommendation for outstanding contributions.</li>
-        </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity5">
+            Acer x Sydney Film Festival
+          </button>
+        </h2>
+        <div id="activity5" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
+          <div class="accordion-body">
+            <p><strong>Event Promoter</strong></p>
+            <ul>
+              <li>Facilitated workshops and event operations.</li>
+              <li>Received a letter of recommendation for outstanding contributions.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <div class="list-group-item">
-        <h4>Global Digital Economy Summit 2022</h4>
-        <p><strong>Volunteer</strong></p>
-        <ul>
-          <li>Assisted in organizing a summit attended by 500+ participants.</li>
-        </ul>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity6">
+            Global Digital Economy Summit 2022
+          </button>
+        </h2>
+        <div id="activity6" class="accordion-collapse collapse" data-bs-parent="#activitiesAccordion">
+          <div class="accordion-body">
+            <p><strong>Volunteer</strong></p>
+            <ul>
+              <li>Assisted in organizing a summit attended by 500+ participants.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -97,7 +141,5 @@
       <p>&copy; 2025 Jason Xu. All rights reserved.</p>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
