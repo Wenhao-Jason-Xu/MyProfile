@@ -15,12 +15,10 @@
       min-height: 100vh;
     }
 
-    /* Let content fill the screen */
     .content {
       flex: 1;
     }
 
-    /* Navbar styling */
     .navbar-custom {
       padding: 15px 0;
     }
@@ -31,13 +29,11 @@
       margin: 0;
     }
 
-    /* Enlarged description text */
     p.text-muted {
       font-size: 1.3rem;
       font-weight: 500;
     }
 
-    /* Accordion styling */
     .accordion-button {
       font-size: 1.3rem;
       font-weight: bold;
@@ -47,7 +43,6 @@
       font-size: 1.1rem;
     }
 
-    /* Sticky footer */
     .footer {
       position: fixed;
       bottom: 0;
@@ -61,7 +56,7 @@
 </head>
 <body>
 
-<!-- Navbar (Back Button + Title) -->
+<!-- Navigation Bar -->
 <nav class="navbar navbar-dark bg-dark fixed-top navbar-custom">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="btn btn-outline-light" href="index.html">Go Back Home</a>
@@ -69,45 +64,70 @@
   </div>
 </nav>
 
-<!-- Content Section -->
+<!-- Project Content -->
 <section class="container mt-5 pt-5 content">
-  <p class="text-center text-muted">Showcasing my coursework-based engineering projects.</p>
+  <p class="text-center text-muted">Showcasing my in-curricular engineering projects.</p>
 
   <div class="accordion" id="projectsAccordion">
 
-  <!-- Project 1 -->
-<div class="accordion-item">
-  <h2 class="accordion-header">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project1">
-      Cruise Control & Lane Changing Automation
-    </button>
-  </h2>
-  <div id="project1" class="accordion-collapse collapse">
-    <div class="accordion-body">
-      <p><strong>Project Overview:</strong> This project explores the design and implementation of automated cruise control and lane-changing strategies using a Mercedes AMG C63s model. The objective was to develop and validate control algorithms that enhance vehicle stability and performance under dynamic driving conditions.</p>
-
-      <p><strong>Methodology:</strong></p>
-      <ul>
-        <li>Designed a <strong>Proportional (P) Controller</strong> to regulate vehicle speed while minimizing deviation.</li>
-        <li>Developed a <strong>Proportional-Derivative (PD) Controller</strong> for smooth and responsive lane-changing maneuvers.</li>
-        <li>Conducted extensive simulations to evaluate system performance under varying driving scenarios.</li>
-      </ul>
-
-      <p><strong>Key Findings:</strong></p>
-      <ul>
-        <li>The P Controller effectively maintained speed but exhibited steady-state errors in response to external disturbances.</li>
-        <li>The PD Controller enabled precise and stable lane changes, improving safety and maneuverability.</li>
-        <li>Future enhancements include integrating an <strong>Integral (I) Component</strong> to eliminate steady-state errors and further refine performance.</li>
-      </ul>
-
-      <a href="3500Design_Project1.pdf" download class="btn btn-secondary">📄 Download Full Report</a>
+    <!-- Project 1: Cruise Control & Lane Changing -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project1">
+          Cruise Control & Lane Changing Automation
+        </button>
+      </h2>
+      <div id="project1" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Project Overview:</strong> This project explores the design and implementation of automated cruise control and lane-changing strategies using a Mercedes AMG C63s model. The objective was to develop and validate control algorithms that enhance vehicle stability and performance under dynamic driving conditions.</p>
+          <p><strong>Methodology:</strong></p>
+          <ul>
+            <li>Developed a <strong>P Controller</strong> for speed regulation.</li>
+            <li>Implemented a <strong>PD Controller</strong> for lane transitions to ensure smooth changes.</li>
+            <li>Simulated system performance under real-world conditions.</li>
+          </ul>
+          <p><strong>Findings:</strong></p>
+          <ul>
+            <li>P Controller effectively maintained speed but exhibited steady-state errors.</li>
+            <li>PD Controller improved lane change accuracy, reducing drift.</li>
+            <li>Future work involves adding an I component for enhanced precision.</li>
+          </ul>
+          <a href="3500Design_Project1.pdf" download class="btn btn-secondary">📄 Download Full Report</a>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
+    <!-- Project 2: Vehicle Suspension System Control -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project2">
+          State Feedback Controller for Vehicle Suspension System
+        </button>
+      </h2>
+      <div id="project2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          <p><strong>Project Overview:</strong> This project focuses on the design of a state feedback controller to enhance vehicle ride stability and comfort. A quarter-car suspension model was developed to analyze suspension dynamics and control strategies.</p>
+          <p><strong>Methodology:</strong></p>
+          <ul>
+            <li>Derived system equations based on Newton’s second law and modeled a quarter-car system.</li>
+            <li>Designed a <strong>state feedback controller</strong> with proportional gain tuning.</li>
+            <li>Validated the model using MATLAB and Simulink simulations.</li>
+          </ul>
+          <p><strong>Findings:</strong></p>
+          <ul>
+            <li>The designed controller effectively mitigated road disturbances, improving ride comfort.</li>
+            <li>Tested under step and sinusoidal road inputs, achieving expected stability and damping.</li>
+            <li>Future improvements include integrating a full-vehicle model and nonlinear dynamics for better accuracy.</li>
+          </ul>
+          <a href="dp2.pdf" download class="btn btn-secondary">📄 Download Full Report</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- Sticky Footer -->
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
     <p>&copy; 2025 Jason Xu. All rights reserved.</p>
