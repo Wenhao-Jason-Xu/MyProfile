@@ -64,6 +64,7 @@
   </div>
 </nav>
 
+  
 <!-- Project Content -->
 <section class="container mt-5 pt-5 content">
   <p class="text-center text-muted">Showcasing my in-curricular engineering projects.</p>
@@ -189,7 +190,47 @@
     </div>
   </div>
 </div>
+<!-- Project: Thermal Analysis and Fin Optimization -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project1">
+          Thermal Analysis and Fin Optimization
+        </button>
+      </h2>
+      <div id="project5" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          
+          <p><strong>Project Overview:</strong></p>
+          <p>
+            This project investigates the steady-state thermal behavior of a CPU heat sink using numerical  simulation techniques.
+            The primary objective is to optimize the fin length to ensure efficient heat dissipation while maintaining a maximum 
+            temperature below 98°C. Finite Element Method (FEM) in MATLAB and ANSYS simulations were utilized to analyze the 
+            temperature distribution and validate the optimization results.
+          </p>
 
+          <p><strong>Methodologies:</strong></p>
+          <ul>
+            <li>Constructed the geometry of the heat sink in **Design Modeller ANSYS** and divided the structure into three regions: **Aluminum, Silicon, and FR-4**.</li>
+            <li>Implemented **Steady-State Thermal Solver** to simulate the temperature distribution under given boundary conditions.</li>
+            <li>Developed a **Finite Element Model (FEM)** in MATLAB using **Galerkin FEM with linear triangular elements** to solve the thermal equation.</li>
+            <li>Validated the numerical results against **ANSYS simulations** to ensure accuracy.</li>
+            <li>Conducted fin length optimization by iteratively adjusting the aluminum fin size to achieve a maximum temperature below 98°C.</li>
+          </ul>
+
+          <p><strong>Findings:</strong></p>
+          <ul>
+            <li>Using a **tetrahedral mesh** with **0.001m** resolution provided an optimal balance between accuracy and computational cost.</li>
+            <li>Temperature distribution results showed that reducing mesh size improved numerical accuracy.</li>
+            <li>The initial maximum temperature was **229.06°C**, which required fin length optimization to reduce it.</li>
+            <li>Through iterative optimization, an aluminum fin length of **42mm** was determined as the optimal solution, achieving a final maximum temperature of **96.56°C**.</li>
+            <li>The numerical model showed a **3.86% deviation** from the ANSYS simulation results, attributed to numerical assumptions.</li>
+          </ul>
+
+         
+
+        </div>
+      </div>
+    </div>
 </section>
 
 <!-- Footer -->
