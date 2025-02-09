@@ -169,24 +169,42 @@
   </h2>
   <div id="project4" class="accordion-collapse collapse">
     <div class="accordion-body">
-      <p><strong>Project Overview:</strong> This project evaluates the feasibility of hydrogen as a fuel in spark-ignition (SI) engines using three key approaches: thermodynamic modeling, heat transfer analysis, and emissions evaluation. A MATLAB-based zero-dimensional single-zone thermodynamic model was developed to simulate in-cylinder pressure, temperature dynamics, and combustion efficiency. Additionally, Annand’s heat transfer model was applied to analyze heat losses, and NOx emissions were assessed to evaluate environmental impact. The study provides a comprehensive analysis of hydrogen’s potential as a clean alternative to fossil fuels.</p>
+      <p><strong>Project Overview:</strong> This project focuses on the numerical modeling, simulation, and performance evaluation of a Honda CBR250RR spark-ignition engine using hydrogen fuel as an alternative to conventional gasoline. The study employs a multi-software approach, utilizing MATLAB for thermodynamic modeling, ANSYS Chemkin for detailed chemical kinetics, and AVL-Boost for ignition timing and performance evaluation.
 
-      <p><strong>Methodology:</strong></p>
+The objective is to assess the feasibility of hydrogen as a combustion fuel in high-revving engines by evaluating ignition timing, combustion efficiency, pressure and temperature variations, and pollutant emissions. The study also investigates optimal operating conditions and heat transfer characteristics to ensure stable engine performance.</p>
+
+      <p><strong>1️⃣ MATLAB-Based Thermodynamic Modeling</strong></p>
       <ul>
-        <li>Developed a zero-dimensional single-zone thermodynamic model to simulate the in-cylinder combustion process of hydrogen-air mixtures.</li>
-        <li>Predicted cylinder pressure, temperature variations, and combustion efficiency under different operating conditions.</li>
-        <li>Applied Annand’s heat transfer model to evaluate heat losses through the cylinder walls.</li>
-        <li>Compared the impact of constant vs. variable wall temperature conditions on heat loss through cylinder wall.</li>
-        <li>Investigated NOx emissions formation during hydrogen combustion and its environmental implications.</li>
+        <li>Developed a **0-D single-zone thermodynamic model** to predict **cylinder pressure and temperature profiles** based on the Otto cycle.</li>
+        <li>Integrated a **heat transfer sub-model**, incorporating **Newton’s Law of Cooling and Annand’s correlation** for energy dissipation analysis.</li>
+        <li>Conducted **equivalence ratio sensitivity analysis** to assess the impact of **fuel-air mixture variations** on combustion efficiency.</li>
       </ul>
 
-      <p><strong>Role: Research Contributor & MATLAB Code Developer</strong></p>
+      <p><strong>2️⃣ ANSYS Chemkin for Combustion Kinetics & Heat Loss</strong></p>
       <ul>
-        <li>Developed a MATLAB-based zero-dimensional single-zone thermodynamic model to simulate combustion dynamics in SI engine using pure hydrogen and its blend.</li>
-        <li>Implemented multiple cylinder-wall heat transfer models to assess the affects of energy losses on engine performanceunder different operating conditions.</li>
-        <li>Demonstrated strong project management skills, facilitated research coordination, structured methodologies, and ensured effective communication within the team.</li>
+        <li>Simulated **detailed chemical kinetics** using **Chemkin's SI Engine Zonal Model** to analyze hydrogen-air combustion reactions.</li>
+        <li>Applied **Hohenburg heat transfer correlation** to estimate **heat dissipation through cylinder walls**.</li>
+        <li>Examined **gas velocity and Reynolds number-based flow models** to refine **combustion efficiency predictions**.</li>
       </ul>
 
+      <p><strong>3️⃣ AVL-Boost for Engine Performance & Ignition Timing</strong></p>
+      <ul>
+        <li>Developed an **AVL-Boost engine model** to study **ignition timing effects on power, torque, and in-cylinder pressure**.</li>
+        <li>Simulated **hydrogen, methane, and hydrogen-methane fuel blends** to evaluate **combustion characteristics** and **pollutant emissions**.</li>
+        <li>Analyzed **NOx formation trends**, assessing emission reductions compared to conventional fuels.</li>
+      </ul>
+
+  
+<p><strong>Role:</strong></p>
+<ul>
+  <li>Conducted **literature review** on thermodynamic modeling and heat transfer correlations for hydrogen combustion.</li>
+  <li>Developed a **0-D MATLAB model** to simulate **cylinder pressure, temperature, and energy dissipation** during combustion.</li>
+  <li>Implemented **heat transfer analysis** using Newton’s Law of Cooling and Annand’s correlation.</li>
+  <li>Performed **equivalence ratio sensitivity analysis** to study fuel-air mixture effects on combustion efficiency.</li>
+  <li>Validated MATLAB results against **AVL-Boost and Chemkin simulations**, ensuring consistency in combustion modeling.</li>
+  <li>Provided MATLAB-driven insights for **ignition timing optimization** and **combustion stability** in hydrogen-fueled engines.</li>
+  <li>Demonstrated strong project management skills, facilitated research coordination, structured methodologies, and ensured effective communication within the team.</li>
+</ul>
     </div>
   </div>
 </div>
