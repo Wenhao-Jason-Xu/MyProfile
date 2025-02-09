@@ -182,9 +182,9 @@
 
       <p><strong>Role: Research Contributor & MATLAB Code Developer</strong></p>
       <ul>
-        <li>Developed a MATLAB-based zero-dimensional thermodynamic model to simulate combustion dynamics.</li>
-        <li>Implemented heat transfer analysis to assess energy losses under different operating conditions.</li>
-        <li>Facilitated research coordination, structured methodologies, and ensured effective communication within the team.</li>
+        <li>Developed a MATLAB-based zero-dimensional single-zone thermodynamic model to simulate combustion dynamics in SI engine using pure hydrogen and its blend.</li>
+        <li>Implemented multiple cylinder-wall heat transfer models to assess the affects of energy losses on engine performanceunder different operating conditions.</li>
+        <li>Demonstrated strong project management skills, facilitated research coordination, structured methodologies, and ensured effective communication within the team.</li>
       </ul>
 
     </div>
@@ -217,14 +217,6 @@
             <li>Conducted fin length optimization by iteratively adjusting the aluminum fin size to achieve a maximum temperature below 98°C.</li>
           </ul>
 
-          <p><strong>Findings:</strong></p>
-          <ul>
-            <li>Using a **tetrahedral mesh** with **0.001m** resolution provided an optimal balance between accuracy and computational cost.</li>
-            <li>Temperature distribution results showed that reducing mesh size improved numerical accuracy.</li>
-            <li>The initial maximum temperature was **229.06°C**, which required fin length optimization to reduce it.</li>
-            <li>Through iterative optimization, an aluminum fin length of **42mm** was determined as the optimal solution, achieving a final maximum temperature of **96.56°C**.</li>
-            <li>The numerical model showed a **3.86% deviation** from the ANSYS simulation results, attributed to numerical assumptions.</li>
-          </ul>
 
          
 
@@ -259,34 +251,6 @@
   <li>Validated solver accuracy through <strong>grid refinement and time-step convergence analysis</strong>.</li>
   <li>Simulated heat conduction using <strong>ANSYS Transient Thermal Solver</strong> with appropriate boundary conditions.</li>
   <li>Compared <strong>MATLAB vs. ANSYS results</strong> to assess solver efficiency and error sources.</li>
-</ul>
-<p><strong>Key Findings:</strong></p>
-<ul>
-  <li><strong>Solver Performance & Accuracy:</strong>
-    <ul>
-      <li>Numerical methods demonstrated strong convergence with optimized mesh and time steps.</li>
-      <li>The implicit scheme improved stability and computational efficiency.</li>
-    </ul>
-  </li>
-  <li><strong>Heat Transfer Behavior:</strong>
-    <ul>
-      <li>Heat conducted radially, with rapid temperature increase before stabilization.</li>
-      <li>Insulation significantly reduced heat transfer to the handle, maintaining lower temperatures.</li>
-    </ul>
-  </li>
-  <li><strong>MATLAB vs. ANSYS Comparison:</strong>
-    <ul>
-      <li>MATLAB results underpredicted temperatures due to 2D simplifications and convection modeling differences.</li>
-      <li>Both methods followed expected heat transfer trends, confirming model validity.</li>
-    </ul>
-  </li>
-  <li><strong>Future Improvements:</strong>
-    <ul>
-      <li>Extend to <strong>3D FEM modeling</strong> for improved accuracy.</li>
-      <li>Implement <strong>higher-order elements</strong> to reduce numerical diffusion.</li>
-      <li>Enhance convection modeling for more realistic heat transfer representation.</li>
-    </ul>
-  </li>
 </ul>
 
 
