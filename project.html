@@ -231,6 +231,68 @@
         </div>
       </div>
     </div>
+
+
+      <!-- Project: Numerical Simulation of Transient Heat Transfer in a Heated Pan -->
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#project6">
+          Numerical Simulation of Transient Heat Transfer in a Heated Pan (Group of 2)
+        </button>
+      </h2>
+      <div id="project6" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          
+          <p><strong>Project Overview:</strong></p>
+          <p>
+            This project investigates the **transient heat transfer** behavior of a **heated pan**, modeled using **numerical methods** in 
+            MATLAB and validated against **ANSYS Transient Thermal Solver**. A **2D finite element method (FEM) solver** was 
+            developed to simulate heat conduction over time, implementing an **implicit backward-time scheme** for stability. The 
+            study analyzes temperature distribution, evaluates numerical accuracy, and compares MATLAB results against 
+            commercial software to highlight the effectiveness of custom solvers.
+          </p>
+
+    <p><strong>Methodology:</strong></p>
+<ul>
+  <li>Developed a <strong>2D transient heat conduction solver</strong> using the <strong>Galerkin Finite Element Method (FEM)</strong> in MATLAB.</li>
+  <li>Implemented an <strong>implicit backward-time discretization scheme</strong> for numerical stability.</li>
+  <li>Validated solver accuracy through <strong>grid refinement and time-step convergence analysis</strong>.</li>
+  <li>Simulated heat conduction using <strong>ANSYS Transient Thermal Solver</strong> with appropriate boundary conditions.</li>
+  <li>Compared <strong>MATLAB vs. ANSYS results</strong> to assess solver efficiency and error sources.</li>
+</ul>
+<p><strong>Key Findings:</strong></p>
+<ul>
+  <li><strong>Solver Performance & Accuracy:</strong>
+    <ul>
+      <li>Numerical methods demonstrated strong convergence with optimized mesh and time steps.</li>
+      <li>The implicit scheme improved stability and computational efficiency.</li>
+    </ul>
+  </li>
+  <li><strong>Heat Transfer Behavior:</strong>
+    <ul>
+      <li>Heat conducted radially, with rapid temperature increase before stabilization.</li>
+      <li>Insulation significantly reduced heat transfer to the handle, maintaining lower temperatures.</li>
+    </ul>
+  </li>
+  <li><strong>MATLAB vs. ANSYS Comparison:</strong>
+    <ul>
+      <li>MATLAB results underpredicted temperatures due to 2D simplifications and convection modeling differences.</li>
+      <li>Both methods followed expected heat transfer trends, confirming model validity.</li>
+    </ul>
+  </li>
+  <li><strong>Future Improvements:</strong>
+    <ul>
+      <li>Extend to <strong>3D FEM modeling</strong> for improved accuracy.</li>
+      <li>Implement <strong>higher-order elements</strong> to reduce numerical diffusion.</li>
+      <li>Enhance convection modeling for more realistic heat transfer representation.</li>
+    </ul>
+  </li>
+</ul>
+
+
+        </div>
+      </div>
+    </div>
 </section>
 
 <!-- Footer -->
